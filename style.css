@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+/* Keyframes for the shine effect */
+@keyframes shine {
+    0% { color: #b74b4b; text-shadow: 0 0 5px #b74b4b, 0 0 10px #b74b4b, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f; }
+    50% { color: #ffffff; text-shadow: 0 0 5px #ff007f, 0 0 15px #ff007f, 0 0 25px #b74b4b, 0 0 35px #b74b4b, 0 0 45px #ff007f; }
+    100% { color: #b74b4b; text-shadow: 0 0 5px #b74b4b, 0 0 10px #b74b4b, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f; }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -42,7 +49,7 @@ header{
     color: #b74b4b;
     font-weight: 800;
     cursor: pointer;
-    transition: 0.5s ease;
+    animation: shine 2s infinite alternate; /* Add shine animation */
 }
 
 .logo:hover{
@@ -229,38 +236,5 @@ span{
         content: "Web Developer";
     }
     21%, 40%{
-        content: "Developer";
-    }
-    41%, 60%{
-        content: "Web Designer";
-    }
-    81%, 100%{
-        content: "Script Writer";
-    }
-}
+        content:
 
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-}
